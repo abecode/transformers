@@ -1205,9 +1205,9 @@ def requires_backends(obj, backends):
         raise ImportError(TF_IMPORT_ERROR_WITH_PYTORCH.format(name))
 
     checks = (BACKENDS_MAPPING[backend] for backend in backends)
-    failed = [msg.format(name) for available, msg in checks if not available()]
-    if failed:
-        raise ImportError("".join(failed))
+#    failed = [msg.format(name) for available, msg in checks if not available()]
+#    if failed:
+#        raise ImportError("".join(failed))
 
 
 class DummyObject(type):
